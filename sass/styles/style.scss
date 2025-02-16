@@ -1,25 +1,67 @@
+$font-stack: 'Inknut Antiqua';
+
+$foreground: #282828;
+$background: #fbf1c7;
+
+$gray: #928374;
+$red: #9d0006;
+$green: #79740e;
+$yellow: #b57614;
+$blue: #076678;
+$purple: #8f3f71;
+$aqua: #427b58;
+$orange: #af3a03;
+$red-dim:    #cc2412;
+$green-dim:  #98971a;
+$yellow-dim: #d79921;
+$blue-dim:   #458598;
+$purple-dim: #b16286;
+$aqua-dim:   #689d6a;
+$orange-dim: #d65d0e;
+$gray-dim:   #7c6f64;
+
+
 @font-face {
-	font-family: Inknut;
+	font-family: Inknut Antiqua;
 	src: url("/fonts/inknut_antiqua/InknutAntiqua-Regular.ttf");
 	font-weight: normal;
 }
 
 body {
-	font-family: Inknut;
+	background-color: $foreground;
+	color: $foreground;
+	font-family: $font-stack;
 	font-weight: normal;
+	line-height: 20pt;
+}
+
+a {
+	color: $blue;
+	:visited {
+		color: $blue_dim;
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-align: center;
+	text-decoration-line: underline;
+	text-decoration-thickness: 2pt;
 }
 
 .page-content {
+	background: $background;
 	display: flex;
 	flex-direction: row;
+	width: 650pt;
+	margin: auto;
+	padding-bottom: 3em;
 }
 
 .navbar {
-	background-color: #00ff00;
-	padding: 20pt
+	padding: 20pt;
 }
 
 .section {
-	background-color: #ffff00;
-	padding: 20pt
+	flex-grow: 1;
+	padding: 20pt;
 }
